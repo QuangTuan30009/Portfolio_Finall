@@ -1,3 +1,100 @@
-.hero-section{
-    
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;400;700&display=swap&subset=vietnamese');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.hero-section {
+  width: 100%;
+  //   max-width: 1200px;
+  height: 100vh;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 200px;
+  padding-top: 50px;
+  font-family: 'Noto Sans', sans-serif;
+
+
+  .hero-content {
+    font-size: 20px;
+    color: white;
+
+    .hero-greeting{
+        color: gray;
+    }
+
+    .hero-name {
+      font-size: 48px;
+      margin-bottom: 10px;
+      color: rgb(118, 45, 162);
+    }
+
+    .hero-title {
+      font-size: 32px;
+      color: #7c3aed;
+    }
+
+    .hero-description {
+      font-size: 18px;
+      color: gray;
+      max-width: 500px;
+      line-height: 1.6;
+      margin-bottom: 40px;
+    }
+
+    .hero-buttons {
+      display: flex;
+      gap: 20px;
+    }
+
+    .btn {
+      padding: 12px 24px;
+      font-size: 16px;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+
+      &.btn-primary {
+        background-color: transparent;
+        border: 1px solid #311ca8;
+        color: #f2e6e6fb;
+
+        &:hover {
+          background-color: rgba(100, 255, 218, 0.1);
+        }
+      }
+
+      &.btn-secondary {
+        background-color: #7c3aed;
+        border: 1px solid #7c3aed;
+        color: white;
+
+        &:hover {
+          background-color: #6d28d9;
+        }
+      }
+    }
+  }
+
+  .hero-visual {
+    // flex: 1;
+    display: flex;
+
+    .image-wrapper img {
+      width: 400px;
+      height: 500px;
+      object-fit: cover;
+      border-radius: 20px; 
+      border: 2px solid #000000;
+      box-shadow: 0 0 20px rgba(146, 135, 155, 0.26); /* Hiệu ứng phát sáng */
+    }
+    &:hover {
+      transform: scale(1.05);
+      transition: transform 0.5s ease;
+    }
+  }
 }
