@@ -7,7 +7,7 @@ function Header() {
     <div className="navbar">
       <div className="navbar__logo">
         <h2>Tuan Quang</h2>
-        <h3>Fontend Developer</h3>
+        <h3>Frontend Developer</h3>
       </div>
       <div className="navbar__menu">
         <ul className="navbar__list">
@@ -18,7 +18,11 @@ function Header() {
         </ul>
         <div className="nav-right">
           <button className="theme-but" onClick={() => setDark(!dark)}>
-            {dark ? "🌙" : "☀️"}
+            {dark ? (
+              <i className="bi bi-moon"></i>
+            ) : (
+              <i className="bi bi-brightness-high"></i>
+            )}
           </button>
           <button className="contact-btn">Contact</button>
         </div>
