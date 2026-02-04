@@ -1,17 +1,30 @@
 import React from "react";
 import "./index.scss";
+import { Typewriter } from "react-simple-typewriter";
+
 function Hero_section() {
   return (
     <div className="hero-section">
       <div className="hero-content">
-        <span className="hero-greeting">Hi, my name is</span>
+        <span className="hero-greeting">Hello, I'm</span>
         <h1 className="hero-name">Quang Tuan</h1>
-        <h2 className="hero-title">I'm a Front-End Developer</h2>
+        <h2>
+          I'm a{" "}
+          <Typewriter
+            words={["Fontend-Developer", "Freelancer"]}
+            loop
+            cursor
+            cursorStyle="|"
+            typeSpeed={100}
+            deleteSpeed={50}
+            delaySpeed={1000}
+          />
+        </h2>{" "}
         <p className="hero-description">
-          specializing in building 
-          exceptional digital experiences using ReactJS.
+          I’m a creative Frontend Developer dedicated to crafting high-quality
+          web experiences. I enjoy solving problems, optimizing performance, and
+          designing intuitive interfaces.
         </p>
-
         <div className="hero-buttons">
           <button className="btn btn-primary">Check my work</button>
           <button className="btn btn-secondary">Contact me</button>
