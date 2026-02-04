@@ -1,0 +1,56 @@
+.container_tech {
+  background:
+    radial-gradient(circle at center, #7c3aed33, transparent 50%),
+    linear-gradient(#020617, #020617);
+    
+}
+.tech-stack {
+  padding: 10px 300px;
+}
+
+.tech-title {
+  text-align: center;
+  font-size: 32px;
+  margin-bottom: 40px;
+  margin-top: 60px;
+  color: #EC4899;
+}
+
+.tech-grid {
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  gap: 24px;
+}
+
+/* Card */
+.skill-card {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 18px;
+  padding: 28px 20px;
+
+  text-align: center;
+
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+
+  transition: all 0.3s ease;
+  cursor: pointer;
+
+  &:hover {
+    transform: translateY(-6px) scale(1.05);
+    background: rgba(255, 255, 255, 0.08);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    border: 1px solid #3a30c5;
+  }
+}
+
+.skill-icon {
+  font-size: 46px;
+  margin-bottom: 14px;
+}
+
+.skill-title {
+  color: #e5e7eb;
+  font-size: 15px;
+  font-weight: 600;
+}
