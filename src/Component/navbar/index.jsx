@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./index.scss";
-function Header() {
+
+function Navbar({ onHome, onAbout, onProject, onContact }) {
   const [dark, setDark] = useState(false);
 
   return (
@@ -11,10 +12,18 @@ function Header() {
       </div>
       <div className="navbar__menu">
         <ul className="navbar__list">
-          <li>Home</li>
-          <li>About</li>
-          <li>Project</li>
-          <li>Skills</li>
+          <li onClick={onHome} style={{ cursor: "pointer" }}>
+            Home
+          </li>
+          <li onClick={onAbout} style={{ cursor: "pointer" }}>
+            About
+          </li>
+          <li onClick={onProject} style={{ cursor: "pointer" }}>
+            Project
+          </li>
+          <li onClick={onContact} style={{ cursor: "pointer" }}>
+            Skills
+          </li>
         </ul>
         <div className="nav-right">
           <button className="theme-but" onClick={() => setDark(!dark)}>
@@ -31,4 +40,4 @@ function Header() {
   );
 }
 
-export default Header;
+export default Navbar;
