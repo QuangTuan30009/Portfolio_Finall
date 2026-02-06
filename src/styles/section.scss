@@ -1,0 +1,21 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;400;700&display=swap&subset=vietnamese");
+
+// Common section container styles
+.section-container {
+  width: 100%;
+  min-height: 100vh;
+  color: #fff;
+  padding: 10px 200px;
+  padding-top: 50px;
+  font-family: "Noto Sans", sans-serif;
+  background:
+    radial-gradient(circle at center, #7c3aed33, transparent 50%),
+    linear-gradient(#020617, #020617);
+}
+
+// Reset styles
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
