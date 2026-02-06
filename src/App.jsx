@@ -1,10 +1,11 @@
 import "./App.css";
 import React, { useRef } from "react";
 import Navbar from "./Component/navbar";
-import Hero_section from "./Component/hero-section";
+import Home from "./Component/home";
 import About from "./Component/about";
 import Project from "./Component/project";
 import Tech_Stack from "./Component/tech-stack";
+import TextStyle from "./Component/text-style";
 function App() {
   const homeRef = useRef(null);
   const aboutRef = useRef(null);
@@ -25,7 +26,7 @@ function App() {
       />
 
       <section ref={homeRef}>
-        <Hero_section />
+        <Home />
       </section>
 
       <section ref={aboutRef}>

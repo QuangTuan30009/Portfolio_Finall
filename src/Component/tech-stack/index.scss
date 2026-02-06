@@ -2,7 +2,6 @@
   background:
     radial-gradient(circle at center, #7c3aed33, transparent 50%),
     linear-gradient(#020617, #020617);
-    
 }
 .tech-stack {
   padding: 10px 300px;
@@ -13,12 +12,12 @@
   font-size: 32px;
   margin-bottom: 40px;
   margin-top: 60px;
-  color: #EC4899;
+  color: #ec4899;
 }
 
 .tech-grid {
   display: grid;
-  grid-template-columns: repeat(4,1fr);
+  grid-template-columns: repeat(4, 1fr);
   gap: 24px;
 }
 

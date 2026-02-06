@@ -1,25 +1,10 @@
-@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;400;700&display=swap&subset=vietnamese");
-
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
+@import "../../styles/section.scss";
 
 .hero-section {
-  width: 100%;
-  //   max-width: 1200px;
-  height: 100vh;
-  color: #fff;
+  @extend .section-container;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 300px;
-  padding-top: 50px;
-  font-family: "Noto Sans", sans-serif;
-  background:
-    radial-gradient(circle at center, #7c3aed33, transparent 50%),
-    linear-gradient(#020617, #020617);
 
   .hero-content {
     font-size: 20px;
@@ -90,18 +75,18 @@
   .hero-visual {
     // flex: 1;
     display: flex;
+    transition: transform 0.5s ease;
 
     .image-wrapper img {
-      width: 500px;
-      height: 600px;
-      object-fit: cover;
-      border-radius: 20px;
-      border: 2px solid #000000;
-      box-shadow: 0 0 20px rgba(146, 135, 155, 0.26); /* Hiệu ứng phát sáng */
+      // width: 400px;
+      // height: 500px;
+      // object-fit: cover;
+      // border-radius: 20px;
+      // border: 2px solid #000000;
+      // box-shadow: 0 0 20px rgba(146, 135, 155, 0.26); /* Hiệu ứng phát sáng */
     }
     &:hover {
-      transform: scale(1.15) rotate(-5deg);
-      transition: transform 0.5s ease;
+      transform: scale(1.25) rotate(-3deg);
     }
   }
 }
