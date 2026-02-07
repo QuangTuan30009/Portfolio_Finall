@@ -1,9 +1,14 @@
-import React from 'react'
+import React from "react";
+import "./index.scss";
 
 function Project() {
   return (
-    <div>Project</div>
-  )
+    <div>
+      <div className="project-container">
+        Project Section
+      </div>
+    </div>
+  );
 }
 
 export default Project;

@@ -26,7 +26,7 @@ function Navbar({ onHome, onAbout, onProject, onContact }) {
           </li>
         </ul>
         <div className="nav-right">
-          <label className="switch">
+          {/* <label className="switch">
             <span className="sun">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                 <g fill="#ffd43b">
@@ -47,8 +47,14 @@ function Navbar({ onHome, onAbout, onProject, onContact }) {
               onChange={() => setDark(!dark)}
             />
             <span className="slider"></span>
-          </label>
-          <button className="contact-btn">Contact</button>
+          </label> */}
+          <a
+            href="https://www.facebook.com/quangtuan.ta.507"
+            target="_blank"
+            className="contact-btn"
+          >
+            Contact
+          </a>
         </div>
       </div>
     </div>

@@ -2,7 +2,7 @@ import React from "react";
 import "./index.scss";
 import TextStyle from "../text-style";
 
-function About() {
+function About({ onProject }) {
   return (
     <div className="container-about">
       <div className="header">About me</div>
@@ -21,7 +21,12 @@ function About() {
             </p>
             <div className="button-container">
               <button className="button">
-                <span className="button-content">Download CV </span>
+                <a
+                  href="https://drive.google.com/drive/folders/12GB2ZrM2oqCWpaZx0NeseiR9DPvh1P7t?usp=drive_link"
+                  className="button-content"
+                >
+                  Download CV{" "}
+                </a>
               </button>
 
               <button className="Projects-Button">
@@ -153,7 +158,13 @@ function About() {
                   </svg>
                 </span>
 
-                <span className="text">Projects</span>
+                <span
+                  onClick={onProject}
+                  style={{ cursor: "pointer" }}
+                  className="text"
+                >
+                  Projects
+                </span>
               </button>
             </div>
           </div>

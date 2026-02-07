@@ -30,7 +30,11 @@ function App() {
       </section>
 
       <section ref={aboutRef}>
-        <About />
+        <About
+          onProject={() =>
+            projectRef.current.scrollIntoView({ behavior: "smooth" })
+          }
+        />
       </section>
 
       <section ref={projectRef}>

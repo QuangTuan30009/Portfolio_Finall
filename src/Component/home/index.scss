@@ -53,35 +53,48 @@
       margin-top: 20px;
     }
 
+    .tech-skills {
+      display: flex;
+      gap: 25px;
+      margin-bottom: 30px;
+
+      p {
+        background-color: transparent;
+        border: 2px solid rgb(88, 77, 77);
+        padding: 8px 20px;
+        border-radius: 20px;
+        font-size: 15px;
+        color: rgb(252, 252, 252);
+      }
+      p:hover {
+        border-color: #7951b9;
+        background-color: #462299;
+        color: #fff;
+        transform: scale(1.1);
+        transition: all 0.3s ease;
+      }
+    }
+
     .hero-buttons {
       display: flex;
-      gap: 20px;
+      gap: 30px;
     }
 
     .btn {
-      padding: 12px 24px;
-      font-size: 16px;
-      border-radius: 10px;
+      padding: 8px 12px;
+      font-size: 20px;
+      border-radius: 12px;
       cursor: pointer;
       transition: all 0.3s ease;
 
       &.btn-primary {
         background-color: transparent;
-        border: 1px solid #311ca8;
+        border: 1px solid #1f1e22;
         color: #f2e6e6fb;
 
         &:hover {
-          background-color: rgba(100, 255, 218, 0.1);
-        }
-      }
-
-      &.btn-secondary {
-        background-color: #7c3aed;
-        border: 1px solid #7c3aed;
-        color: white;
-
-        &:hover {
-          background-color: #6d28d9;
+          background-color: rgba(94, 83, 109, 0.8);
+          transform: translateY(-5px);
         }
       }
     }

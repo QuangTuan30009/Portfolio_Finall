@@ -31,9 +31,41 @@ function Home() {
           web experiences. I enjoy solving problems, optimizing performance, and
           designing intuitive interfaces.
         </p>
+        <div className="tech-skills">
+          <p>React</p>
+          <p>Javascript</p>
+          <p>Node.js</p>
+          <p>Python</p>
+        </div>
         <div className="hero-buttons">
-          <button className="btn btn-primary">Check my work</button>
-          <button className="btn btn-secondary">Contact me</button>
+          <a
+            href="https://www.facebook.com/quangtuan.ta.507"
+            target="_blank"
+            className="btn btn-primary"
+          >
+            <i class="bi bi-facebook"></i>
+          </a>
+          <a
+            href="https://github.com/QuangTuan30009"
+            target="_blank"
+            className="btn btn-primary"
+          >
+            <i class="bi bi-github"></i>
+          </a>
+          <a
+            href="www.linkedin.com/in/quang-tuấn-791a69303"
+            target="_blank"
+            className="btn btn-primary"
+          >
+            <i class="bi bi-linkedin"></i>
+          </a>
+          <a
+            href="https://www.instagram.com/bacxiuda.20"
+            target="_blank"
+            className="btn btn-primary"
+          >
+            <i class="bi bi-instagram"></i>
+          </a>
         </div>
       </div>
 
