@@ -9,28 +9,28 @@ function Project() {
       title: "Weather Prediction Dashboard ",
       description:
         "This is a description of project 1. It showcases innovative solutions and cutting-edge technology.",
-      image: "project1.png",
+      image: "/project1.png",
       isReverse: false,
     },
     {
       title: "Recognise-handwritten-digits",
       description:
         "This is a description of project 2. A comprehensive platform built with modern frameworks.",
-      image: "project2.png",
+      image: "/project2.png",
       isReverse: true,
     },
     {
       title: "To-do-list App",
       description:
         "This is a description of project 3. An elegant solution to complex problems.",
-      image: "project3.png",
+      image: "/project3.png",
       isReverse: false,
     },
     {
       title: "Spotify Clone",
       description:
         "This is a description of project 3. An elegant solution to complex problems.",
-      image: "project4.png",
+      image: "/project4.png",
       isReverse: true,
     },
   ];
