@@ -39,6 +39,7 @@ function App() {
 
       <section ref={projectRef}>
         <Project />
+        
       </section>
 
       <section ref={contactRef}>
