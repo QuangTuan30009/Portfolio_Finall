@@ -1,4 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;400;700&display=swap&subset=vietnamese");
+@import "../../styles/mixin.scss";
+
+// ========================================
+// 🎨 DESKTOP STYLES (Default)
+// ========================================
 
 .navbar {
   background:
@@ -15,6 +20,7 @@
   left: 0;
   right: 0;
 
+  // Logo
   .navbar__logo {
     display: flex;
     flex-direction: column;
@@ -38,20 +44,63 @@
     }
   }
 
+  // Hamburger Menu Button (Hidden on desktop)
+  .hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 28px;
+    height: 24px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    z-index: 1001;
+
+    span {
+      width: 100%;
+      height: 3px;
+      background-color: #fff;
+      border-radius: 10px;
+      transition: all 0.3s ease;
+      transform-origin: center;
+    }
+
+    &.active {
+      span:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+      }
+
+      span:nth-child(2) {
+        opacity: 0;
+      }
+
+      span:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+      }
+    }
+  }
+
+  // Overlay (Hidden on desktop)
+  .menu-overlay {
+    display: none;
+  }
+
+  // Menu
   .navbar__menu {
     display: flex;
     gap: 40px;
-    // font-size: 20px;
     cursor: pointer;
     padding: 12px 0;
     font-family: "Noto Sans", sans-serif;
+    align-items: center;
 
     .navbar__list {
       display: flex;
       list-style: none;
       gap: 30px;
       font-weight: 20;
-      color:  #fff;
+      color: #fff;
       font-size: 18px;
       padding: 12px 0;
 
@@ -67,13 +116,13 @@
           height: 2px;
           bottom: -5px;
           left: 0;
-          background-color:  #7c3aed;;
+          background-color: #7c3aed;
           transition: width 0.3s ease;
         }
 
         &:hover {
           opacity: 1;
-          color:  #7c3aed;
+          color: #7c3aed;
 
           &::after {
             width: 100%;
@@ -86,103 +135,6 @@
       display: flex;
       gap: 15px;
       align-items: center;
-
-      // .switch {
-      //   font-size: 17px;
-      //   position: relative;
-      //   display: inline-block;
-      //   width: 60px;
-      //   height: 30px;
-      //   margin-right: 10px;
-
-      //   input {
-      //     opacity: 0;
-      //     width: 0;
-      //     height: 0;
-      //   }
-
-      //   .slider {
-      //     position: absolute;
-      //     cursor: pointer;
-      //     top: 0;
-      //     left: 0;
-      //     right: 0;
-      //     bottom: 0;
-      //     background-color: #73c0fc;
-      //     transition: 0.4s;
-      //     border-radius: 30px;
-
-      //     &:before {
-      //       position: absolute;
-      //       content: "";
-      //       height: 26px;
-      //       width: 26px;
-      //       border-radius: 20px;
-      //       left: 2px;
-      //       bottom: 2px;
-      //       z-index: 2;
-      //       background-color: #d9cfcf;
-      //       transition: 0.4s;
-      //     }
-      //   }
-
-      //   .sun svg {
-      //     position: absolute;
-      //     top: 6px;
-      //     left: 36px;
-      //     z-index: 1;
-      //     width: 24px;
-      //     height: 24px;
-      //     animation: rotate 15s linear infinite;
-      //   }
-
-      //   .moon svg {
-      //     fill: #73c0fc;
-      //     position: absolute;
-      //     top: 5px;
-      //     left: 5px;
-      //     z-index: 1;
-      //     width: 24px;
-      //     height: 24px;
-      //     animation: tilt 5s linear infinite;
-      //   }
-
-      //   .input:checked + .slider {
-      //     background-color: #183153;
-      //   }
-
-      //   .input:focus + .slider {
-      //     box-shadow: 0 0 1px #183153;
-      //   }
-
-      //   .input:checked + .slider:before {
-      //     transform: translateX(30px);
-      //   }
-      // }
-
-      // @keyframes rotate {
-      //   0% {
-      //     transform: rotate(0);
-      //   }
-      //   100% {
-      //     transform: rotate(360deg);
-      //   }
-      // }
-
-      // @keyframes tilt {
-      //   0% {
-      //     transform: rotate(0deg);
-      //   }
-      //   25% {
-      //     transform: rotate(-10deg);
-      //   }
-      //   75% {
-      //     transform: rotate(10deg);
-      //   }
-      //   100% {
-      //     transform: rotate(0deg);
-      //   }
-      // }
     }
 
     .contact-btn {
@@ -193,13 +145,190 @@
       padding: 8px 15px;
       border-radius: 15px;
       cursor: pointer;
-      // font-weight: 400;
       font-size: 17px;
       transition: 0.3s;
 
       &:hover {
         background: #8f1dc0;
         transform: translateY(-2px);
+      }
+    }
+  }
+}
+
+// ========================================
+// RESPONSIVE STYLES
+// ========================================
+
+// TABLET (768px - 1024px)
+@include tablet {
+  .navbar {
+    padding: 0px 50px;
+
+    .navbar__logo {
+      font-size: 14px;
+
+      h3 {
+        font-size: 13px;
+      }
+    }
+
+    .hamburger {
+      display: flex;
+    }
+
+    .menu-overlay {
+      display: block;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.7);
+      z-index: 999;
+      backdrop-filter: blur(2px);
+    }
+
+    .navbar__menu {
+      position: fixed;
+      top: 0;
+      right: -100%;
+      height: 100vh;
+      width: 50%;
+      max-width: 350px;
+      flex-direction: column;
+      background: linear-gradient(180deg, #0f172a 0%, #1e293b 100%);
+      padding: 100px 40px 40px;
+      gap: 35px;
+      transition: right 0.4s ease;
+      box-shadow: -5px 0 15px rgba(0, 0, 0, 0.5);
+      z-index: 1000;
+
+      &.active {
+        right: 0;
+      }
+
+      .navbar__list {
+        flex-direction: column;
+        gap: 30px;
+        padding: 0;
+        width: 100%;
+        font-size: 20px;
+
+        li {
+          padding: 12px 0;
+
+          &::after {
+            width: 100%;
+            opacity: 0.3;
+          }
+
+          &:hover::after {
+            opacity: 1;
+          }
+        }
+      }
+
+      .nav-right {
+        width: 100%;
+        justify-content: center;
+        margin-top: 15px;
+      }
+
+      .contact-btn {
+        padding: 10px 25px;
+        font-size: 17px;
+        width: 100%;
+        text-align: center;
+      }
+    }
+  }
+}
+
+// MOBILE (≤ 767px)
+@include sp {
+  .navbar {
+    padding: 0px 20px;
+
+    .navbar__logo {
+      font-size: 13px;
+
+      h2 {
+        font-size: 18px;
+      }
+
+      h3 {
+        font-size: 12px;
+      }
+    }
+
+    .hamburger {
+      display: flex;
+    }
+
+    .menu-overlay {
+      display: block;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.7);
+      z-index: 999;
+      backdrop-filter: blur(2px);
+    }
+
+    .navbar__menu {
+      position: fixed;
+      top: 0;
+      right: -100%;
+      height: 100vh;
+      width: 70%;
+      max-width: 300px;
+      flex-direction: column;
+      background: linear-gradient(180deg, #0f172a 0%, #1e293b 100%);
+      padding: 80px 30px 30px;
+      gap: 30px;
+      transition: right 0.4s ease;
+      box-shadow: -5px 0 15px rgba(0, 0, 0, 0.5);
+      z-index: 1000;
+
+      &.active {
+        right: 0;
+      }
+
+      .navbar__list {
+        flex-direction: column;
+        gap: 25px;
+        padding: 0;
+        width: 100%;
+        font-size: 20px;
+
+        li {
+          padding: 10px 0;
+
+          &::after {
+            width: 100%;
+            opacity: 0.3;
+          }
+
+          &:hover::after {
+            opacity: 1;
+          }
+        }
+      }
+
+      .nav-right {
+        width: 100%;
+        justify-content: center;
+        margin-top: 10px;
+      }
+
+      .contact-btn {
+        padding: 12px 30px;
+        font-size: 16px;
+        width: 100%;
+        text-align: center;
       }
     }
   }
