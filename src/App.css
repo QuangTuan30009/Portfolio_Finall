@@ -11,6 +11,7 @@ body {
 
 .App {
   min-height: 100vh;
+  overflow-x: hidden;
   background:
     radial-gradient(circle at center, #7c3aed33, transparent 50%),
     linear-gradient(#020617, #020617);
