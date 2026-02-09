@@ -3,6 +3,12 @@ import "./index.scss";
 
 function Navbar({ onHome, onAbout, onProject, onContact }) {
   const [dark, setDark] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const handleMenuClick = (callback) => {
+    callback();
+    setIsMenuOpen(false); // Đóng menu khi click vào item
+  };
 
   return (
     <div className="navbar">
@@ -10,18 +16,47 @@ function Navbar({ onHome, onAbout, onProject, onContact }) {
         <h2>Tuan Quang</h2>
         <h3>Frontend Developer</h3>
       </div>
-      <div className="navbar__menu">
+
+      {/* Hamburger Menu Button */}
+      <button
+        className={`hamburger ${isMenuOpen ? "active" : ""}`}
+        onClick={() => setIsMenuOpen(!isMenuOpen)}
+        aria-label="Toggle menu"
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      {/* Overlay - Click để đóng menu */}
+      {isMenuOpen && (
+        <div className="menu-overlay" onClick={() => setIsMenuOpen(false)} />
+      )}
+
+      <div className={`navbar__menu ${isMenuOpen ? "active" : ""}`}>
         <ul className="navbar__list">
-          <li onClick={onHome} style={{ cursor: "pointer" }}>
+          <li
+            onClick={() => handleMenuClick(onHome)}
+            style={{ cursor: "pointer" }}
+          >
             Home
           </li>
-          <li onClick={onAbout} style={{ cursor: "pointer" }}>
+          <li
+            onClick={() => handleMenuClick(onAbout)}
+            style={{ cursor: "pointer" }}
+          >
             About
           </li>
-          <li onClick={onProject} style={{ cursor: "pointer" }}>
+          <li
+            onClick={() => handleMenuClick(onProject)}
+            style={{ cursor: "pointer" }}
+          >
             Project
           </li>
-          <li onClick={onContact} style={{ cursor: "pointer" }}>
+          <li
+            onClick={() => handleMenuClick(onContact)}
+            style={{ cursor: "pointer" }}
+          >
             Skills
           </li>
         </ul>
