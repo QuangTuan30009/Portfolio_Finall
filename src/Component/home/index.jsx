@@ -75,7 +75,7 @@ function Home() {
           <Lottie
             animationData={Coding}
             loop={true}
-            style={{ width: "480px", height: "480px" }}
+            // style={{ width: "480px", height: "480px" }}
           />
         </div>
       </div>
